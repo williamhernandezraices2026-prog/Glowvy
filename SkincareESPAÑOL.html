@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Skincare</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="Css/principal.css" />
+</head>
+<body>
+
+     <!-- Flash sale bar -->
+<div class="ofertas-ticker bg-success text-white py-1">
+  <div class="container overflow-hidden">
+    <div class="ticker-text">
+Envía sets en oferta con un 20% de descuento en tu primera compra. ¡Oferta por tiempo limitado! 15% de descuento en tu segunda compra de tu producto favorito.    </div>
+  </div>
+</div>
+
+<div class="top-search-bar bg-light border-bottom position-relative z-3" style="padding-top: 0.1rem; padding-bottom: 0.1rem;">
+  <div class="container position-relative">
+    <div class="d-flex justify-content-between align-items-center">
+
+      <!-- Logo on the left -->
+      <div class="logo d-flex align-items-center">
+        <img src="img/Neutral Elegant Minimalist Jewelry Logo.png" alt="Glowvy" style="height: 100px; width: auto;" />
+      </div>
+
+      <!-- Search bar in the center -->
+      <form class="flex-grow-1 mx-4" role="search">
+        <div class="input-group">
+          <span class="input-group-text bg-white border-end-0 rounded-start-pill">
+            <i class="bi bi-search text-muted"></i>
+          </span>
+          <input
+            type="search"
+            class="form-control border-start-0 rounded-end-pill shadow-sm"
+            placeholder="Search products, brands..."
+            aria-label="Search"
+          />
+        </div>
+      </form>
+
+      <!-- User and cart icons -->
+      <div class="d-flex align-items-center ms-3 gap-3">
+
+        <!-- Profile icon -->
+        <div class="profile-icon">
+          <a href="perfil.html" class="text-dark" aria-label="Profile">
+            <i class="bi bi-person-circle fs-4"></i>
+          </a>
+        </div>
+
+        <!-- Cart icon -->
+        <div class="cart-icon position-relative">
+    <a href="carrito.html" class="text-dark" aria-label="Cart">
+      <i class="bi bi-cart3 fs-4"></i>
+      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+        2
+      </span>
+    </a>
+  </div>
+          <a href="SkincareESPAÑOL.html" class="text-dark" aria-label="Español">
+  <img src="https://flagcdn.com/w20/us.png" alt="Español" width="24" height="16" style="border-radius: 2px;">
+</a>
+        </div>
+
+      </div>
+
+      <!-- Mobile menu button -->
+      <button class="mobile-nav-toggle bi bi-list" aria-label="Open menu"></button>
+    </div>
+
+    <!-- Navbar below -->
+    <nav id="navmenu" class="navbar navbar-expand-lg navbar-light navmenu flex-grow-1">
+      <ul class="navbar-nav gap-4 mx-auto">
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="expoespañol.html">Inicio</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            href="makeupespañol.html"
+            class="nav-link text-dark"
+            role="button"
+            aria-expanded="false"
+          >
+            Maquillaje
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            href="SkincareESPAÑOL.html"
+            class="nav-link text-dark"
+            role="button"
+            aria-expanded="false"
+          >
+            Cuidado de la piel
+          </a>
+        </li>
+        <li class="nav-item"><a class="nav-link text-dark" href="menespañol.html">Hombres</a></li>
+        <li class="nav-item"><a class="nav-link text-dark" href="about us.html">Sobre nosotros</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+
+
+
+<div class="banner">
+  <img src="img/Skincarebanner.png" alt="Banner" />
+</div>
+
+
+
+
+<!-- Featured Offers Section -->
+<section class="ofertas py-5 bg-light text-center">
+  <div class="container">
+    <div class="row justify-content-center">
+     
+      <!-- Product 1 -->
+      <div class="col-md-4 mb-4">
+        <div class="card oferta-card h-100">
+          <img src="img/bellap1.png" class="card-img-top" alt="Lipstick on sale">
+          <div class="card-body">
+            <h5 class="card-title">Kit de Aceites Naturales
+</h5>
+            <p class="card-text text-muted"> <strong>$11.99</strong></p>
+            <a href="detallesskincare1.html" class="btn" style="background-color: #4f9a58; color: white;">Ver</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="card oferta-card h-100">
+          <img src="img/bellap2.png" class="card-img-top" alt="Makeup base on sale">
+          <div class="card-body">
+            <h5 class="card-title">Serum de Aceite de Ricino y Semilla de Uva
+</h5>
+            <p class="card-text text-muted"> <strong>$8.99</strong></p>
+            <a href="detallesskincare2.html" class="btn" style="background-color: #4f9a58; color: white;">Ver</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="card oferta-card h-100">
+          <img src="img/bellap3.png" class="card-img-top" alt="Eyeshadows on sale">
+          <div class="card-body">
+            <h5 class="card-title">Kits de Aceites Esenciales
+</h5>
+            <p class="card-text text-muted"> <strong>$13.99</strong></p>
+            <a href="detallesskincare3.html" class="btn" style="background-color: #4f9a58; color: white;">Ver</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="col-md-4 mb-4">
+        <div class="card oferta-card h-100">
+          <img src="img/bambu1.png" class=card-img-top alt="Mask on sale">
+          <div class="card-body">
+            <h5 class="card-title">Pastilla de Champú Sólido
+</h5>
+            <p class="card-text text-muted"> <strong>$11.99</strong></p>
+            <a href="#" class="btn" style="background-color: #4f9a58; color: white;">Ver</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="col-md-4 mb-4">
+        <div class="card oferta-card h-100">
+          <img src="img/bambu2.png" class="card-img-top" alt="Facial serum on sale">
+          <div class="card-body">
+            <h5 class="card-title">Jabón natural para el cuidado facial
+</h5>
+            <p class="card-text text-muted"> <strong>$8.99</strong></p>
+            <a href="#" class="btn" style="background-color: #4f9a58; color: white;">Ver</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="col-md-4 mb-4">
+        <div class="card oferta-card h-100">
+          <img src="img/bambu3.png" class="card-img-top" alt="Beauty set on sale">
+          <div class="card-body">
+            <h5 class="card-title">Jabón de Aloe & Carbón</h5>
+            <p class="card-text text-muted"> <strong>$6.99</strong></p>
+            <a href="#" class="btn" style="background-color: #4f9a58; color: white;">Ver</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 7 -->
+      <div class="col-md-4 mb-4">
+        <div class="card oferta-card h-100">
+          <img src="img/oferde12.png" class="card-img-top" alt="Mask on sale">
+          <div class="card-body">
+            <h5 class="card-title">Zao Organico-Champú Solido</h5>
+            <p class="card-text text-muted"><strong>$18.99</strong></p>
+            <a href="#" class="btn" style="background-color: #4f9a58; color: white;">Ver</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 8 -->
+      <div class="col-md-4 mb-4">
+        <div class="card oferta-card h-100">
+          <img src="img/oferde9.png" class="card-img-top" alt="Facial serum on sale">
+          <div class="card-body">
+            <h5 class="card-title">Neutrogena-Fresh Limpiador espumoso
+</h5>
+            <p class="card-text text-muted"><strong>$30.99</strong></p>
+            <a href="#" class="btn" style="background-color: #4f9a58; color: white;">Ver</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 9 -->
+      <div class="col-md-4 mb-4">
+        <div class="card oferta-card h-100">
+          <img src="img/niveamjer8.png" class="card-img-top" alt="Beauty set on sale">
+          <div class="card-body">
+            <h5 class="card-title">Nivea-Micelar Gel</h5>
+            <p class="card-text text-muted"> <strong>$11.99</strong></p>
+            <a href="#" class="btn" style="background-color: #4f9a58; color: white;">Ver</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 10 -->
+      <div class="col-md-4 mb-4">
+        <div class="card oferta-card h-100">
+          <img src="img/niveamjer2.png" class="card-img-top" alt="Facial oil">
+          <div class="card-body">
+            <h5 class="card-title">Nivea-exfoliazión facial</h5>
+            <p class="card-text text-muted"> <strong>$17.99</strong></p>
+            <a href="#" class="btn" style="background-color: #4f9a58; color: white;">Ver</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 11 -->
+      <div class="col-md-4 mb-4">
+        <div class="card oferta-card h-100">
+          <img src="img/hellos7.png" class="card-img-top" alt="Facial toner">
+          <div class="card-body">
+            <h5 class="card-title">Aceite natural Banate-int
+            </h5>
+            <p class="card-text text-muted"> <strong>$8.99</strong></p>
+            <a href="#" class="btn" style="background-color: #4f9a58; color: white;">Ver</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 12 -->
+      <div class="col-md-4 mb-4">
+        <div class="card oferta-card h-100">
+          <img src="img/hellos9 (1).png" class="card-img-top" alt="Body scrub">
+          <div class="card-body">
+            <h5 class="card-title">Hello Soap-Menta</h5>
+            <p class="card-text text-muted"> <strong>$7.99</strong></p>
+            <a href="#" class="btn" style="background-color: #4f9a58; color: white;">Ver</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 13 -->
+      <div class="col-md-4 mb-4">
+        <div class="card oferta-card h-100">
+          <img src="img/neumuj20.png" class="card-img-top" alt="Night cream">
+          <div class="card-body">
+            <h5 class="card-title">Toallitas desmaquillantes-Neutrogena
+</h5>
+            <p class="card-text text-muted"> <strong>$7.99</strong></p>
+            <a href="#" class="btn" style="background-color: #4f9a58; color: white;">Ver</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 14 -->
+      <div class="col-md-4 mb-4">
+        <div class="card oferta-card h-100">
+          <img src="img/neumuj21.png" class="card-img-top" alt="Facial mask">
+          <div class="card-body">
+            <h5 class="card-title">Limpiador diario Neutrogena – Refreshingly Clear
+</h5>
+            <p class="card-text text-muted"><strong>$11.99</strong></p>
+            <a href="#" class="btn" style="background-color: #4f9a58; color: white;">Ver</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 15 -->
+      <div class="col-md-4 mb-4">
+        <div class="card oferta-card h-100">
+          <img src="img/neumuj4.png" class="card-img-top" alt="Body lotion">
+          <div class="card-body">
+            <h5 class="card-title">Limpiador facial equilibrante de aceite – The Beauty Parlour
+</h5>
+            <p class="card-text text-muted"> <strong>$12.99</strong></p>
+            <a href="#" class="btn" style="background-color: #4f9a58; color: white;">Ver</a>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div> <!-- End row -->
+  </div> <!-- End container -->
+</section>
+
+</section> <!-- Close last offers section -->
+
+  <footer class="footer text-white pt-4 pb-4" style="background-color: #000000;">
+  <div class="container text-center">
+    <div class="mb-3">
+      <a href="#" class="footer-icon me-3"><i class="bi bi-instagram"></i></a>
+      <a href="#" class="footer-icon me-3"><i class="bi bi-whatsapp"></i></a>
+      <a href="#" class="footer-icon me-3"><i class="bi bi-facebook"></i></a>
+      <a href="#" class="footer-icon"><i class="bi bi-envelope"></i></a>
+    </div>
+    <div class="border-top pt-4 mt-4 text-white" style="font-size: 1rem;">
+      © 2025 Glowvy - Todos los derechos reservados.
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer-icon {
+    color: white;
+    transition: color 0.3s ease;
+    text-decoration: none;
+  }
+
+  .footer-icon:hover {
+    color: #55b67c; 
+  }
+</style>
+
+</body>
+
+</html>

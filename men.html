@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Principal Men</title>
+
+  <!-- Bootstrap CSS y Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="Css/principal.css" />
+</head>
+<body>
+
+
+  <!-- Barra intermitente de ofertas -->
+<div class="ofertas-ticker bg-success text-white py-1">
+  <div class="container overflow-hidden">
+    <div class="ticker-text">
+      Shipping sets on sale with 20% Discount on the first purchase Limited time offer! 15% Discount when you buy the second purchase of your favorite product!
+    </div>
+  </div>
+</div>
+
+<div class="top-search-bar bg-light border-bottom position-relative z-3" style="padding-top: 0.1rem; padding-bottom: 0.1rem;">
+  <div class="container position-relative">
+    <div class="d-flex justify-content-between align-items-center">
+
+      <!-- Logo a la izquierda -->
+      <div class="logo d-flex align-items-center">
+        <img src="img/Neutral Elegant Minimalist Jewelry Logo.png" alt="Glowvy" style="height: 100px; width: auto;" />
+      </div>
+
+     <!-- Buscador con sugerencias -->
+<form class="flex-grow-1 mx-4" role="search" onsubmit="return false">
+  <div class="input-group position-relative">
+    <span class="input-group-text bg-white border-end-0 rounded-start-pill">
+      <i class="bi bi-search text-muted"></i>
+    </span>
+    <input
+      id="inputBusqueda"
+      type="search"
+      class="form-control border-start-0 rounded-end-pill shadow-sm"
+      placeholder="Search products, brands..."
+      autocomplete="off"
+    />
+     <!-- Contenedor de sugerencias -->
+    <div
+      id="sugerencias"
+      class="suggestions d-none position-absolute bg-white border rounded shadow-sm w-100"
+      style="top: 100%; left: 0; z-index: 1000;"
+    ></div>
+  </div>
+</form>
+
+      <!-- Íconos de usuario y carrito -->
+      <div class="d-flex align-items-center ms-3 gap-3">
+
+        <!-- Ícono de perfil -->
+        <div class="profile-icon">
+          <a href="perfil.html" class="text-dark" aria-label="Profile">
+            <i class="bi bi-person-circle fs-4"></i>
+          </a>
+        </div>
+
+        <!-- Ícono de carrito -->
+       <div class="cart-icon position-relative">
+    <a href="carrito.html" class="text-dark" aria-label="Cart">
+      <i class="bi bi-cart3 fs-4"></i>
+      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+        2
+      </span>
+    </a>
+  </div>
+    
+          <a href="Men ESPAÑOL.html" class="text-dark" aria-label="Español">
+  <img src="https://flagcdn.com/w20/es.png" alt="Español" width="24" height="16" style="border-radius: 2px;">
+</a>
+      </div>
+
+      <!-- Botón menú móvil -->
+      <button class="mobile-nav-toggle bi bi-list" aria-label="Open menu"></button>
+    </div>
+
+    <!-- Navbar debajo -->
+    <nav id="navmenu" class="navbar navbar-expand-lg navbar-light navmenu flex-grow-1">
+      <ul class="navbar-nav gap-4 mx-auto">
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="expo.html">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            href="Makeup.html"
+            class="nav-link text-dark"
+            role="button"
+            aria-expanded="false"
+          >
+            Makeup
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            href="Skincare.html"
+            class="nav-link text-dark"
+            role="button"
+            aria-expanded="false"
+          >
+            Skincare
+          </a>
+        </li>
+        <li class="nav-item"><a class="nav-link text-dark" href="men.html">Men</a></li>
+        <li class="nav-item"><a class="nav-link text-dark" href="aboutus.html">About us</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+
+<div class="banner">
+  <img src="img/menbanner.png" alt="Banner" />
+</div>
+
+<!-- Bootstrap JS-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+     <style>
+
+  .oferta-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .oferta-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px  #4f9a58;
+  }
+
+  .card-img-top {
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+  }
+</style>
+
+</head>
+<body>
+
+<!-- Sección de Ofertas Destacadas -->
+<section class="ofertas py-5 bg-light text-center">
+  <div class="container">
+   
+    <div class="row justify-content-center">
+      
+      <!-- Producto 1 -->
+      <div class="col-md-4 mb-4">
+        <div class="card oferta-card h-100">
+          <img src="img/neuman1.png" class="card-img-top" alt="Lipstick on sale">
+          <div class="card-body">
+            <h5 class="card-title">Skin Clearing Acne Face Wash</h5>
+            <p class="card-text text-muted"> <strong>$9.99</strong></p>
+            <a href="detallesmen1.html" class="btn" style="background-color: #4f9a58; color: white;">Buy</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 2 -->
+      <div class="col-md-4 mb-4">
+        <div class="card oferta-card h-100">
+          <img src="img/niveamen1.png" class="card-img-top" alt="Foundation on sale">
+          <div class="card-body">
+            <h5 class="card-title">sensitive shaving Gel</h5>
+            <p class="card-text text-muted"> <strong>$7.99</strong></p>
+            <a href="detallesmen2.html" class="btn" style="background-color: #4f9a58; color: white;">Buy</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 3 -->
+      <div class="col-md-4 mb-4">
+        <div class="card oferta-card h-100">
+          <img src="img/oferde10.png" class="card-img-top" alt="Eyeshadows on sale">
+          <div class="card-body">
+            <h5 class="card-title">Lumin-Classic Maintenance Set</h5>
+            <p class="card-text text-muted"> <strong>$29.99</strong></p>
+            <a href="detallesmen3.html" class="btn" style="background-color: #4f9a58; color: white;">Buy</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 4 -->
+      <div class="col-md-4 mb-4">
+        <div class="card oferta-card h-100">
+          <img src="img/neuman8.png" class=card-img-top alt="Mascara on sale">
+          <div class="card-body">
+            <h5 class="card-title">Invigorating Face Wash</h5>
+            <p class="card-text text-muted"> <strong>$10.99</strong></p>
+            <a href="#" class="btn" style="background-color: #4f9a58; color: white;">Buy</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 5 -->
+      <div class="col-md-4 mb-4">
+        <div class="card oferta-card h-100">
+          <img src="img/niveamen2.png" class="card-img-top" alt="Facial serum on sale">
+          <div class="card-body">
+            <h5 class="card-title">Energy Revitalizing Lotion</h5>
+            <p class="card-text text-muted"> <strong>$13.99</strong></p>
+            <a href="#" class="btn" style="background-color: #4f9a58; color: white;">Buy</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 6 -->
+      <div class="col-md-4 mb-4">
+        <div class="card oferta-card h-100">
+          <img src="img/niveamen7.png" class="card-img-top" alt="Beauty set on sale">
+          <div class="card-body">
+            <h5 class="card-title">Protect & Care Moisturizing face Wash</h5>
+            <p class="card-text text-muted"> <strong>$8.99</strong></p>
+            <a href="#" class="btn" style="background-color: #4f9a58; color: white;">Buy</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 7 -->
+      <div class="col-md-4 mb-4">
+        <div class="card oferta-card h-100">
+          <img src="img/neuman7.png" class="card-img-top" alt="Mascara on sale">
+          <div class="card-body">
+            <h5 class="card-title">Neutrogena Hydro Boost Gel Cream</h5>
+            <p class="card-text text-muted"> <strong>$20.99</strong></p>
+            <a href="#" class="btn" style="background-color: #4f9a58; color: white;">Buy</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 8 -->
+      <div class="col-md-4 mb-4">
+        <div class="card oferta-card h-100">
+          <img src="img/neuman5.png" class="card-img-top" alt="Facial serum on sale">
+          <div class="card-body">
+            <h5 class="card-title">Neutrogena Men Skin Clearing Shave Cream</h5>
+            <p class="card-text text-muted"> <strong>$10.99</strong></p>
+            <a href="#" class="btn" style="background-color: #4f9a58; color: white;">Buy</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 9 -->
+      <div class="col-md-4 mb-4">
+        <div class="card oferta-card h-100">
+          <img src="img/niveamen4.png" class="card-img-top" alt="Beauty set on sale">
+          <div class="card-body">
+            <h5 class="card-title">Nivea Men Shaving Gel</h5>
+            <p class="card-text text-muted"> <strong>$7.99</strong></p>
+            <a href="#" class="btn" style="background-color: #4f9a58; color: white;">Buy</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 10 -->
+      <div class="col-md-4 mb-4">
+        <div class="card oferta-card h-100">
+          <img src="img/neuman6.png" class="card-img-top" alt="Facial oil">
+          <div class="card-body">
+            <h5 class="card-title">Neutrogena Sport Face Oil Free Lotion</h5>
+            <p class="card-text text-muted"> <strong>$13.99</strong></p>
+            <a href="#" class="btn" style="background-color: #4f9a58; color: white;">Buy</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 11 -->
+      <div class="col-md-4 mb-4">
+        <div class="card oferta-card h-100">
+          <img src="img/niveamen6.png" class="card-img-top" alt="Facial toner">
+          <div class="card-body">
+            <h5 class="card-title">Nivea Men Active Energy Moisturising Cream</h5>
+            <p class="card-text text-muted"> <strong>$11.99</strong></p>
+            <a href="#" class="btn" style="background-color: #4f9a58; color: white;">Buy</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 12 -->
+      <div class="col-md-4 mb-4">
+        <div class="card oferta-card h-100">
+          <img src="img/neuman5.png" class="card-img-top" alt="Body scrub">
+          <div class="card-body">
+            <h5 class="card-title">Neutrogena Men Skin Clearing Shave</h5>
+            <p class="card-text text-muted"> <strong>$10.99</strong></p>
+            <a href="#" class="btn" style="background-color: #4f9a58; color: white;">Buy</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 13 -->
+      <div class="col-md-4 mb-4">
+        <div class="card oferta-card h-100">
+          <img src="img/niveamen8.png" class="card-img-top" alt="Night cream">
+          <div class="card-body">
+            <h5 class="card-title">Nivea Cellular Filler Anti-Age Night Cream</h5>
+            <p class="card-text text-muted"> <strong>$20.99</strong></p>
+            <a href="#" class="btn" style="background-color: #4f9a58; color: white;">Buy</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 14 -->
+      <div class="col-md-4 mb-4">
+        <div class="card oferta-card h-100">
+          <img src="img/neuman8.png" class="card-img-top" alt="Facial mask">
+          <div class="card-body">
+            <h5 class="card-title">Neutrogena Men Invigorating Face Wash</h5>
+            <p class="card-text text-muted"> <strong>$10.99</strong></p>
+            <a href="#" class="btn" style="background-color: #4f9a58; color: white;">Buy</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Producto 15 -->
+      <div class="col-md-4 mb-4">
+        <div class="card oferta-card h-100">
+          <img src="img/niveamen6.png" class="card-img-top" alt="Body lotion">
+          <div class="card-body">
+            <h5 class="card-title">Nivea Men Active Energy Moisturising Cream</h5>
+            <p class="card-text text-muted"> <strong>$13.99</strong></p>
+            <a href="#" class="btn" style="background-color: #4f9a58; color: white;">Buy</a>
+          </div>
+        </div>
+      </div>
+
+    
+
+    </div> <!-- Fin fila -->
+  </div> <!-- Fin container -->
+</section>
+
+
+
+
+  <footer class="footer text-white pt-4 pb-4" style="background-color: #000000;">
+  <div class="container text-center">
+    <div class="mb-3">
+     <a href="https://www.instagram.com/glow__vy?igsh=MXd4NWZlcXlzbmJnNw==
+" class="footer-icon me-3"><i class="bi bi-instagram"></i></a>
+      <a href="https://whatsapp.com/dl/" class="footer-icon me-3"><i class="bi bi-whatsapp"></i></a>
+      <a href="#" class="footer-icon me-3"><i class="bi bi-facebook"></i></a>
+      <a href="#" class="footer-icon"><i class="bi bi-envelope"></i></a>
+    </div>
+    <div class="border-top pt-4 mt-4 text-white" style="font-size: 1rem;">
+      © 2025 Glowvy - All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer-icon {
+    color: white;
+    transition: color 0.3s ease;
+    text-decoration: none;
+  }
+
+  .footer-icon:hover {
+    color: #55b67c; 
+  }
+</style>
+<script>
+  const inputBusqueda = document.getElementById('inputBusqueda');
+  const sugerencias = document.getElementById('sugerencias');
+
+  const productos = [
+    { nombre: 'Tea Tree Control', url: 'detalles1.html' },
+    { nombre: 'Rashel Hyaluronic Acid Set', url: 'detalles2.html' },
+    { nombre: 'Zodica Perfumery Skincare Set', url: 'detalles3.html' },
+    { nombre: 'Fenty Beauty Gloss Bomb', url: 'detalles4.html' },
+    { nombre: 'Rare Beauty Liquid Touch', url: 'detalles5.html' },
+    { nombre: 'Huda Beauty Nude', url: 'detalles6.html' },
+    { nombre: 'Skin Clearing Acne Face Wash', url: 'detallesmen1.html' },
+    { nombre: 'Sensitive Shaving Gel', url: 'detallesmen2.html' },
+    { nombre: 'Lumin-Classic Maintenace Set', url: 'detallesmen3.html' },
+    { nombre: 'Natural Oil Kit', url: 'detallesskincare1html.' },
+    { nombre: 'Castor Oil and Grape Seed Serum', url: 'detallesskincare2.html' },
+    { nombre: 'Essential Oil Sets', url: 'detallesskincare3.html' },
+  ];
+
+  inputBusqueda.addEventListener('input', () => {
+    const query = inputBusqueda.value.toLowerCase().trim();
+    sugerencias.innerHTML = '';
+
+    if (query === '') {
+      sugerencias.classList.add('d-none');
+      return;
+    }
+
+    const resultados = productos.filter(producto =>
+      producto.nombre.toLowerCase().includes(query)
+    );
+
+    if (resultados.length === 0) {
+      sugerencias.innerHTML = '<div class="px-3 py-2 text-muted">No results found</div>';
+    } else {
+      resultados.forEach(producto => {
+        const div = document.createElement('div');
+        div.className = 'px-3 py-2 suggestion-item';
+        div.textContent = producto.nombre;
+        div.addEventListener('click', () => {
+          window.location.href = producto.url;
+        });
+        sugerencias.appendChild(div);
+      });
+    }
+
+    sugerencias.classList.remove('d-none');
+  });
+
+  inputBusqueda.addEventListener('keydown', e => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      const termino = inputBusqueda.value.trim().toLowerCase();
+
+      const resultado = productos.find(p =>
+        p.nombre.toLowerCase().includes(termino)
+      );
+
+      if (resultado) {
+        window.location.href = resultado.url;
+      } else {
+        alert('Producto no encontrado');
+      }
+
+      sugerencias.classList.add('d-none');
+    }
+  });
+
+  // Cierra sugerencias al hacer clic fuera
+  document.addEventListener('click', e => {
+    if (!e.target.closest('.input-group')) {
+      sugerencias.classList.add('d-none');
+    }
+  });
+</script>
+
+</body>
+
+</html>

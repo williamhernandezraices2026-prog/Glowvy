@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glowvy - Payment</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f9f7f1;
+      font-family: 'Nunito', sans-serif;
+    }
+
+    .card {
+      border-radius: 15px;
+      border: none;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      background-color: #ffffff;
+    }
+
+    .card-header {
+      background-color: #ffffff;
+      color: #3a5f3a;
+      font-weight: 700;
+      border-bottom: 2px solid #6f9e6f;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      padding: 1rem;
+    }
+
+    .nav-pills .nav-link.active {
+      background-color: #3a5f3a;
+      color: #ffffff;
+    }
+
+    .btn-primary {
+      background-color: #3a5f3a;
+      border: none;
+      border-radius: 30px;
+      font-weight: 700;
+      transition: all 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: #6f9e6f;
+    }
+
+    .form-control:focus {
+      border-color: #3a5f3a;
+      box-shadow: none;
+    }
+
+    label h6 {
+      font-weight: 600;
+      color: #3a5f3a;
+    }
+
+    h1.display-6 {
+      color: #3a5f3a;
+      font-weight: 700;
+    }
+
+    #map {
+      height: 300px;
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      margin-top: 0.5rem;
+    }
+
+    .security-text {
+      font-size: 0.9rem;
+      color: #3a5f3a;
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container py-5">
+  <div class="row mb-4">
+    <div class="col-lg-8 mx-auto text-center">
+      <h1 class="display-6">Payment Form</h1>
+      <p class="security-text"><i class="fas fa-lock"></i> All transactions are secure & encrypted</p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-8 mx-auto">
+      <div class="card">
+        <div class="card-header">
+          <ul class="nav nav-pills rounded nav-fill mb-3" role="tablist">
+            <li class="nav-item">
+              <a class="nav-link active" data-bs-toggle="pill" href="#credit-card">
+                <i class="fas fa-credit-card me-2"></i> Credit Card
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="card-body">
+          <div class="tab-content">
+
+            <!-- Credit Card Form -->
+            <div id="credit-card" class="tab-pane fade show active pt-3">
+              <form id="paymentForm">
+
+                <!-- Tarjeta -->
+                <div class="form-group mb-3">
+                  <label><h6>Owner's Name</h6></label>
+                  <input type="text" name="username" placeholder="Full name" required class="form-control">
+                </div>
+
+                <div class="form-group mb-3">
+                  <label><h6>Card Number</h6></label>
+                  <div class="input-group">
+                    <input type="text" name="cardNumber" placeholder="Valid number" class="form-control" required>
+                    <span class="input-group-text text-muted">
+                      <i class="fab fa-cc-visa mx-1"></i>
+                      <i class="fab fa-cc-mastercard mx-1"></i>
+                      <i class="fab fa-cc-amex mx-1"></i>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="row mb-3">
+                  <div class="col-sm-8">
+                    <label><h6>Expiration Date</h6></label>
+                    <div class="input-group">
+                      <input type="number" placeholder="MM" class="form-control" required>
+                      <input type="number" placeholder="YY" class="form-control" required>
+                    </div>
+                  </div>
+                  <div class="col-sm-4">
+                    <label><h6>CVV <i class="fa fa-question-circle d-inline"></i></h6></label>
+                    <input type="text" required class="form-control" placeholder="Security code">
+                  </div>
+                </div>
+
+                <!-- Dirección de entrega -->
+                <div class="mb-3">
+                  <h6>Delivery Address</h6>
+                  <input type="text" id="street" placeholder="Street / Avenue" class="form-control mb-2" required>
+                  <input type="text" id="neighborhood" placeholder="Neighborhood / Colonia" class="form-control mb-2" required>
+                  <input type="text" id="house" placeholder="House Number / Reference" class="form-control mb-2" required>
+                  <div id="map"></div>
+                  <small class="text-muted">Drag the marker to indicate your exact location</small>
+                </div>
+
+                <!-- Confirm Payment -->
+                <div class="card-footer text-center">
+                  <button type="submit" class="btn btn-primary btn-block shadow-sm">Confirm Payment</button>
+                </div>
+
+              </form>
+            </div>
+            <!-- /Credit Card Form -->
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+// Leaflet map
+const sanSalvador = [13.6929, -89.2182];
+const map = L.map('map').setView(sanSalvador, 13);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; OpenStreetMap contributors'
+}).addTo(map);
+
+const marker = L.marker(sanSalvador, {draggable: true}).addTo(map);
+
+// Form submit
+document.getElementById('paymentForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const pos = marker.getLatLng();
+  console.log("Lat:", pos.lat, "Lng:", pos.lng);
+  alert('✅ Your payment was successful!');
+  this.reset();
+});
+</script>
+
+</body>
+</html>

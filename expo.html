@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Glowvy</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"rel="stylesheet"/><link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"rel="stylesheet"/>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+
+  <link rel="stylesheet" href="Css/principal.css" />
+</head>
+<body>
+<style>
+  .suggestions {
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+.suggestion-item:hover {
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+</style>
+
+  <!-- Barra intermitente de ofertas -->
+  <div class="ofertas-ticker bg-success text-white py-1">
+    <div class="container overflow-hidden">
+      <div class="ticker-text">
+        Free shipping on sets with 20% off on your first purchase! Limited time offer! 15% off on your second purchase of your favorite product!
+      </div>
+    </div>
+  </div>
+
+ <div class="top-search-bar bg-light border-bottom position-relative z-3" style="padding-top: 0.1rem; padding-bottom: 0.1rem;">
+
+    <div class="container position-relative">
+      <div class="d-flex justify-content-between align-items-center">
+
+        <!-- Logo a la izquierda -->
+        <div class="logo d-flex align-items-center">
+<img src="img/Neutral Elegant Minimalist Jewelry Logo.png" alt="Glowvy" style="height: 100px; width: auto;" />
+</div>
+
+
+
+
+
+<!-- Buscador con sugerencias -->
+<form class="flex-grow-1 mx-4" role="search" onsubmit="return false">
+  <div class="input-group position-relative">
+    <span class="input-group-text bg-white border-end-0 rounded-start-pill">
+      <i class="bi bi-search text-muted"></i>
+    </span>
+    <input
+      id="inputBusqueda"
+      type="search"
+      class="form-control border-start-0 rounded-end-pill shadow-sm"
+      placeholder="Search products, brands..."
+      autocomplete="off"
+    />
+     <!-- Contenedor de sugerencias -->
+    <div
+      id="sugerencias"
+      class="suggestions d-none position-absolute bg-white border rounded shadow-sm w-100"
+      style="top: 100%; left: 0; z-index: 1000;"
+    ></div>
+  </div>
+</form>
+
+
+ 
+
+       <!-- Íconos de usuario y carrito -->
+<div class="d-flex align-items-center ms-3 gap-3">
+
+  <!-- Ícono de perfil -->
+  <div class="profile-icon">
+    <a href="perfil.html" class="text-dark" aria-label="Profile">
+      <i class="bi bi-person-circle fs-4"></i>
+    </a>
+  </div>
+
+  <!-- Ícono de carrito -->
+  <div class="cart-icon position-relative">
+    <a href="carrito.html" class="text-dark" aria-label="Cart">
+      <i class="bi bi-cart3 fs-4"></i>
+      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+        2
+      </span>
+    </a>
+  </div>
+  <a href="expo ESPAÑOL.html" class="text-dark" aria-label="Español">
+  <img src="https://flagcdn.com/w20/es.png" alt="Español" width="24" height="16" style="border-radius: 2px;">
+</a>
+
+</div>
+
+        <!-- Botn menu movil -->
+        <button class="mobile-nav-toggle bi bi-list" aria-label="Open menu"></button>
+      </div>
+
+   <!-- Navbar debajo -->
+    <nav id="navmenu" class="navbar navbar-expand-lg navbar-light navmenu flex-grow-1">
+      <ul class="navbar-nav gap-4 mx-auto">
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="expo.html">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            href="Makeup.html"
+            class="nav-link text-dark"
+            role="button"
+            aria-expanded="false"
+          >
+            Makeup
+          </a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            href="Skincare.html"
+            class="nav-link text-dark"
+            role="button"
+            aria-expanded="false"
+          >
+            Skincare
+          </a>
+        </li>
+        <li class="nav-item"><a class="nav-link text-dark" href="men.html">Men</a></li>
+        <li class="nav-item"><a class="nav-link text-dark" href="aboutus.html">About us</a></li>
+
+        <li class="nav-item dropdown">
+  <a
+    class="nav-link text-dark dropdown-toggle"
+    href="#"
+    role="button"
+    data-bs-toggle="dropdown"
+    aria-expanded="false"
+  >
+    Our Brands
+  </a>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="Italia.html">Italia Deluxe</a></li>
+    <li><a class="dropdown-item" href="Neumuj.html">Neutrogena Women</a></li>
+    <li><a class="dropdown-item" href="neuman.html">Neutrogena Men</a></li>
+    <li><a class="dropdown-item" href="Hellosoap.html">Hello Soap</a></li>
+    <li><a class="dropdown-item" href="Bambu.html">Bambu</a></li>
+    <li><a class="dropdown-item" href="Bellaperla.html">Bellaperla</a></li>
+    <li><a class="dropdown-item" href="niveamen.html">Nivea Men</a></li>
+    <li><a class="dropdown-item" href="niveamujer.html">Nivea Women</a></li>
+    <li><a class="dropdown-item" href="rarebeaut.html">Rare Beauty</a></li>
+    <li><a class="dropdown-item" href="tiege.html">Tiege</a></li>
+    <li><a class="dropdown-item" href="zao.html">Zao</a></li>
+  </ul>
+</li>
+
+      </ul>
+      
+    </nav>
+  </div>
+</div>
+<div style="position: relative; width: 100%; height: 100vh; overflow: hidden;">
+  <img src="img/carru-oferde3.jpg" alt="Banner" style="width:100%; height:100%; object-fit: cover;">
+
+  <div style="position:absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.3); z-index:1;"></div>
+
+  <div style="position: absolute; bottom: 15%; left: 50%; transform: translateX(-50%); 
+              color: white; text-align: center; z-index:2; font-family: 'Nunito', sans-serif; text-shadow: 0 2px 10px rgba(0,0,0,0.7);">
+    <h1 style="font-size: 3rem; font-weight: 700; margin-bottom: 0.5rem;">The best products for you</h1>
+    <p style="font-size: 1.5rem; font-weight: 400;">The best makeup and personal care products.</p>
+  </div>
+</div>
+
+  </div>
+
+  <button
+    class="carousel-control-prev"
+    type="button"
+    data-bs-target="#glowvyCarousel"
+    data-bs-slide="prev" >
+   </button>
+  <button
+    class="carousel-control-next"
+    type="button"
+    data-bs-target="#glowvyCarousel"
+    data-bs-slide="next">
+    </button>
+</div>
+
+<!--Marcas-->
+  <div class="carousel-container">
+    <div class="carousel-track" id="patrocinadores-track">
+      <div class="carousel-slide"><a href="Bambu.html" target="_blank"><img src="img/1.png" alt="Bambú" /></a></div>
+<div class="carousel-slide"><a href="Bellaperla.html" target="_blank"><img src="img/2.png" alt="Bella Perla" /></a></div>
+<div class="carousel-slide"><a href="Hellosoap.html" target="_blank"><img src="img/3.png" alt="Hello Soap" /></a></div>
+<div class="carousel-slide"><a href="Italia.html" target="_blank"><img src="img/6.png" alt="Italia Deluxe" /></a></div>
+<div class="carousel-slide"><a href="Neumuj.html" target="_blank"><img src="img/5.png" alt="Neutrogena" /></a></div>
+<div class="carousel-slide"><a href="rarebeaut.html" target="_blank"><img src="img/7.png" alt="Rare Beauty" /></a></div>
+<div class="carousel-slide"><a href="rhode.html" target="_blank"><img src="img/8.png" alt="Rhode" /></a></div>
+<div class="carousel-slide"><a href="zao.html" target="_blank"><img src="img/9.png" alt="Zao" /></a></div>
+<div class="carousel-slide"><a href="niveamen.html" target="_blank"><img src="img/niveahombre.png" alt="Niveahombre" /></a></div>
+<div class="carousel-slide"><a href="niveamujer.html" target="_blank"><img src="img/niveamujer.png" alt="niveamujer" /></a></div>
+<div class="carousel-slide"><a href="neuman.html" target="_blank"><img src="img/Neuman.png" alt="neuman" /></a></div>
+
+<!-- Duplicados para loop infinito -->
+<div class="carousel-slide"><a href="Bambu.html" target="_blank"><img src="img/1.png" alt="Bambú" /></a></div>
+<div class="carousel-slide"><a href="Bellaperla.html" target="_blank"><img src="img/2.png" alt="Bella Perla" /></a></div>
+<div class="carousel-slide"><a href="Hellosoap.html" target="_blank"><img src="img/3.png" alt="Hello Soap" /></a></div>
+<div class="carousel-slide"><a href="Italia.html" target="_blank"><img src="img/6.png" alt="Italia Deluxe" /></a></div>
+<div class="carousel-slide"><a href="Neumuj.html" target="_blank"><img src="img/5.png" alt="Neutrogenamujer" /></a></div>
+<div class="carousel-slide"><a href="rarebeaut.html" target="_blank"><img src="img/7.png" alt="Rare Beauty" /></a></div>
+<div class="carousel-slide"><a href="rhode.html" target="_blank"><img src="img/8.png" alt="Rhode" /></a></div>
+<div class="carousel-slide"><a href="zao.html" target="_blank"><img src="img/9.png" alt="Zao" /></a></div>
+<div class="carousel-slide"><a href="niveamen.html" target="_blank"><img src="img/niveahombre.png" alt="Niveahombre" /></a></div>
+<div class="carousel-slide"><a href="niveamujer.html" target="_blank"><img src="img/niveamujer.png" alt="niveamujer" /></a></div>
+<div class="carousel-slide"><a href="neuman.html" target="_blank"><img src="img/Neuman.png" alt="neuman" /></a></div>
+  </div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+
+
+<!-- Sección de Ofertas Destacadas -->
+<section class="ofertas py-5 bg-light text-center">
+  <div class="container">
+    <div class="row justify-content-center">
+      <!-- Primera fila -->
+      <div class="col-md-4 mb-4">
+        <div class="card oferta-card h-100">
+          <img src="img/oferde10.png" class="card-img-top" alt="Lipstick on sale">
+          <div class="card-body">
+            <h5 class="card-title">Tea Tree Control</h5>
+            <p class="card-text text-muted"> <strong>$30.99</strong></p>
+     <a href="detalles1.html" class="btn" style="background-color: #4f9a58; color: white; border: none;">Buy</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card oferta-card h-100">
+          <img src="img/oferde11.png" class="card-img-top" alt="Makeup base on sale">
+          <div class="card-body">
+            <h5 class="card-title">Rashel Hyaluronic Acid Set</h5>
+            <p class="card-text text-muted"> <strong>$25.99</strong></p>
+           <a href="detalles2.html" class="btn" style="background-color: #4f9a58; color: white; border: none;">Buy</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card oferta-card h-100">
+          <img src="img/oferde12.png" class="card-img-top" alt="Eyeshadows on sale">
+          <div class="card-body">
+            <h5 class="card-title">Zodica Perfumery Skincare Set</h5>
+            <p class="card-text text-muted"> <strong>$52.99</strong></p>
+        <a href="detalles3.html" class="btn" style="background-color: #4f9a58; color: white; border: none;">Buy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="ofertas py-5 bg-light text-center">
+  <div class="container">
+    <div class="row justify-content-center">
+         <h2 class="mb-4 logo-font"></h2>
+      <!-- Segunda fila -->
+      <div class="col-md-4 mb-4">
+        <div class="card oferta-card h-100">
+          <img src="img/oferde4.png" class="card-img-top" alt="Mascara on sale">
+          <div class="card-body">
+            <h5 class="card-title">Fenty Beauty Gloss Bomb</h5>
+            <p class="card-text text-muted"> <strong>$9.99</strong></p>
+           <a href="detalles4.html" class="btn" style="background-color: #4f9a58; color: white; border: none;">Buy</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card oferta-card h-100">
+          <img src="img/oferde5.png" class="card-img-top" alt="Facial serum on sale">
+          <div class="card-body">
+            <h5 class="card-title">Rare Beauty Liquid Touch</h5>
+            <p class="card-text text-muted"> <strong>$11.99</strong></p>
+          <a href="detalles5.html" class="btn" style="background-color: #4f9a58; color: white; border: none;">Buy</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card oferta-card h-100">
+          <img src="img/oferde6.png" class="card-img-top" alt="Beauty set on sale">
+          <div class="card-body">
+            <h5 class="card-title">Huda Beauty Nude</h5>
+            <p class="card-text text-muted"> <strong>$70.99</strong></p>
+   <a href="detalles6.html" class="btn" style="background-color: #4f9a58; color: white; border: none;">Buy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="ofertas py-5 bg-light text-center">
+  <div class="container">
+  <div class="row justify-content-center">
+         <h2 class="mb-4 logo-font"></h2>
+      <!-- Segunda fila -->
+      <div class="col-md-4 mb-4">
+        <div class="card oferta-card h-100">
+          <img src="img/oferde7.png" class="card-img-top" alt="Mascara on sale">
+          <div class="card-body">
+            <h5 class="card-title">Neutroena Hydro Boost Gel Cream + Spray Set</h5>
+            <p class="card-text text-muted"> <strong>$30.99</strong></p>
+           <a href="#" class="btn" style="background-color: #4f9a58; color: white; border: none;">Buy</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card oferta-card h-100">
+          <img src="img/oferde8.png" class="card-img-top" alt="Facial serum on sale">
+          <div class="card-body">
+            <h5 class="card-title">Rare Beauty Brown Harmony Pencil & Gel Duo</h5>
+            <p class="card-text text-muted"> <strong>$25.99</strong></p>
+          <a href="#" class="btn" style="background-color: #4f9a58; color: white; border: none;">Buy</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card oferta-card h-100">
+          <img src="img/oferde9.png" class="card-img-top" alt="Beauty set on sale">
+          <div class="card-body">
+            <h5 class="card-title">Neutrogena Hydro Boost Skinkare Trio</h5>
+            <p class="card-text text-muted"> <strong>$35.99</strong></p>
+   <a href="#" class="btn" style="background-color: #4f9a58; color: white; border: none;">Buy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+</section> <!-- Cierre de la última sección de ofertas -->
+
+  <footer class="footer text-white pt-4 pb-4" style="background-color: #000000;">
+  <div class="container text-center">
+    <div class="mb-3">
+      <a href="https://www.instagram.com/glow__vy?igsh=MXd4NWZlcXlzbmJnNw==
+" class="footer-icon me-3"><i class="bi bi-instagram"></i></a>
+      <a href="https://whatsapp.com/dl/" class="footer-icon me-3"><i class="bi bi-whatsapp"></i></a>
+      <a href="#" class="footer-icon me-3"><i class="bi bi-facebook"></i></a>
+      <a href="#" class="footer-icon"><i class="bi bi-envelope"></i></a>
+    </div>
+    <div class="border-top pt-4 mt-4 text-white" style="font-size: 1rem;">
+      © 2025 Glowvy - All rights reserved.
+    </div>
+  </div>
+</footer>
+<style>
+  .footer-icon {
+    color: white;
+    transition: color 0.3s ease;
+    text-decoration: none;
+  }
+
+  .footer-icon:hover {
+    color: #55b67c; 
+  }
+</style>
+<script>
+  const inputBusqueda = document.getElementById('inputBusqueda');
+  const sugerencias = document.getElementById('sugerencias');
+
+  const productos = [
+    { nombre: 'Tea Tree Control', url: 'detalles1.html' },
+    { nombre: 'Rashel Hyaluronic Acid Set', url: 'detalles2.html' },
+    { nombre: 'Zodica Perfumery Skincare Set', url: 'detalles3.html' },
+    { nombre: 'Fenty Beauty Gloss Bomb', url: 'detalles4.html' },
+    { nombre: 'Rare Beauty Liquid Touch', url: 'detalles5.html' },
+    { nombre: 'Huda Beauty Nude', url: 'detalles6.html' },
+    { nombre: 'Skin Clearing Acne Face Wash', url: 'detallesmen1.html' },
+    { nombre: 'Sensitive Shaving Gel', url: 'detallesmen2.html' },
+    { nombre: 'Lumin-Classic Maintenace Set', url: 'detallesmen3.html' },
+    { nombre: 'Natural Oil Kit', url: 'detallesskincare1html.' },
+    { nombre: 'Castor Oil and Grape Seed Serum', url: 'detallesskincare2.html' },
+    { nombre: 'Essential Oil Sets', url: 'detallesskincare3.html' },
+  ];
+
+  inputBusqueda.addEventListener('input', () => {
+    const query = inputBusqueda.value.toLowerCase().trim();
+    sugerencias.innerHTML = '';
+
+    if (query === '') {
+      sugerencias.classList.add('d-none');
+      return;
+    }
+
+    const resultados = productos.filter(producto =>
+      producto.nombre.toLowerCase().includes(query)
+    );
+
+    if (resultados.length === 0) {
+      sugerencias.innerHTML = '<div class="px-3 py-2 text-muted">No results found</div>';
+    } else {
+      resultados.forEach(producto => {
+        const div = document.createElement('div');
+        div.className = 'px-3 py-2 suggestion-item';
+        div.textContent = producto.nombre;
+        div.addEventListener('click', () => {
+          window.location.href = producto.url;
+        });
+        sugerencias.appendChild(div);
+      });
+    }
+
+    sugerencias.classList.remove('d-none');
+  });
+
+  inputBusqueda.addEventListener('keydown', e => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      const termino = inputBusqueda.value.trim().toLowerCase();
+
+      const resultado = productos.find(p =>
+        p.nombre.toLowerCase().includes(termino)
+      );
+
+      if (resultado) {
+        window.location.href = resultado.url;
+      } else {
+        alert('Producto no encontrado');
+      }
+
+      sugerencias.classList.add('d-none');
+    }
+  });
+
+  // Cierra sugerencias al hacer clic fuera
+  document.addEventListener('click', e => {
+    if (!e.target.closest('.input-group')) {
+      sugerencias.classList.add('d-none');
+    }
+  });
+</script>
+
+</body>
+
+</html>
